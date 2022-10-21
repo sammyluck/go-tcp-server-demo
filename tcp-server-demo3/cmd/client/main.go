@@ -12,7 +12,7 @@ import (
 	"github.com/sammyluck/tcp-server-demo3/packet"
 )
 
-var num = 10
+var num = 30
 
 func startNewConn() {
 	conn, err := net.Dial("tcp", ":8888")
@@ -20,10 +20,9 @@ func startNewConn() {
 		log.Println("dial error:", err)
 		return
 	}
-
 	defer conn.Close()
 	log.Printf("%s : dial ok \n", time.Now().Format("2006-01-02 15:04:05"))
-
+	time.After()
 	// 生成 payload
 	rng, err := codename.DefaultRNG()
 	if err != nil {
