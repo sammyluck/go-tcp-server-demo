@@ -12,7 +12,7 @@ import (
 	"github.com/sammyluck/tcp-server-demo2/packet"
 )
 
-var num = 100
+var num = 30
 
 func startNewConn() {
 	conn, err := net.Dial("tcp", ":8888")

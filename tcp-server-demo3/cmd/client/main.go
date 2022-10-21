@@ -8,11 +8,11 @@ import (
 	"time"
 
 	"github.com/lucasepe/codename"
-	"github.com/sammyluck/tcp-server-demo2/frame"
-	"github.com/sammyluck/tcp-server-demo2/packet"
+	"github.com/sammyluck/tcp-server-demo3/frame"
+	"github.com/sammyluck/tcp-server-demo3/packet"
 )
 
-var num = 30
+var num = 10
 
 func startNewConn() {
 	conn, err := net.Dial("tcp", ":8888")
