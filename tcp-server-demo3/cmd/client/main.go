@@ -22,7 +22,6 @@ func startNewConn() {
 	}
 	defer conn.Close()
 	log.Printf("%s : dial ok \n", time.Now().Format("2006-01-02 15:04:05"))
-	time.After()
 	// 生成 payload
 	rng, err := codename.DefaultRNG()
 	if err != nil {
