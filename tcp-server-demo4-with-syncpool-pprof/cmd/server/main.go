@@ -4,6 +4,8 @@ import (
 	"bufio"
 	"fmt"
 	"net"
+	"net/http"
+	_ "net/http/pprof"
 
 	"github.com/sammyluck/tcp-server-demo4-with-syncpool/frame"
 	"github.com/sammyluck/tcp-server-demo4-with-syncpool/metrics"
@@ -91,6 +93,10 @@ func handleConn(c net.Conn) {
 }
 
 func main() {
+	go func() {
+		http.ListenAndServe(":6060", nil)
+	}()
+
 	l, err := net.Listen("tcp", ":8888")
 	if err != nil {
 		fmt.Println("listen error:", err)
