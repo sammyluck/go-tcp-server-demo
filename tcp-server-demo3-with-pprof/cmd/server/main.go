@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"net"
 	"net/http"
+	_ "net/http/pprof"
 
 	"github.com/sammyluck/tcp-server-demo3/frame"
 	"github.com/sammyluck/tcp-server-demo3/metrics"
