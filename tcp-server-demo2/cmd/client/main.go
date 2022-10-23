@@ -12,10 +12,10 @@ import (
 	"github.com/sammyluck/tcp-server-demo2/packet"
 )
 
-var num = 30
+var num = 100
 
 func startNewConn() {
-	conn, err := net.Dial("tcp", ":8888")
+	conn, err := net.Dial("tcp", "8.142.122.192:8888")
 	if err != nil {
 		log.Println("dial error:", err)
 		return

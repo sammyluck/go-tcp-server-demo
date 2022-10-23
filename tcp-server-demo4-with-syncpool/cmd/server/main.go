@@ -10,6 +10,9 @@ import (
 	"github.com/sammyluck/tcp-server-demo4-with-syncpool/packet"
 )
 
+/**
+version 4 with syncPool 在 version 3 with syncPool 基础上增加 SubmitAck结构体 池化技术
+*/
 // 处理 packet 包数据,Packet 是业务真正需要的消息
 func handlePacket(framePayload []byte) (ackFramePayload []byte, err error) {
 	var p packet.Packet

@@ -9,6 +9,9 @@ import (
 	"github.com/sammyluck/tcp-server-demo2/packet"
 )
 
+/**
+version 2 增加可观测性监控
+*/
 // 处理 packet 包数据,Packet 是业务真正需要的消息
 func handlePacket(framePayload []byte) (ackFramePayload []byte, err error) {
 	var p packet.Packet

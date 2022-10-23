@@ -8,6 +8,10 @@ import (
 	"github.com/sammyluck/tcp-server-demo1/packet"
 )
 
+/**
+version 1 未优化版本
+*/
+
 // 处理 packet 包数据,Packet 是业务真正需要的消息
 func handlePacket(framePayload []byte) (ackFramePayload []byte, err error) {
 	var p packet.Packet

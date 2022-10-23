@@ -10,6 +10,9 @@ import (
 	"github.com/sammyluck/tcp-server-demo3/packet"
 )
 
+/**
+version 3 在可观测性监控基础上增加 read write buffer ，减少系统调用
+*/
 // 处理 packet 包数据,Packet 是业务真正需要的消息
 func handlePacket(framePayload []byte) (ackFramePayload []byte, err error) {
 	var p packet.Packet
