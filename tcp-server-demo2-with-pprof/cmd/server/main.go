@@ -101,6 +101,7 @@ func main() {
 		c, err := l.Accept()
 		if err != nil {
 			fmt.Println("accept error:", err)
+			break
 		}
 
 		// start a new goroutine to handle the new connection.

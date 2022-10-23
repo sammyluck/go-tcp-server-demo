@@ -59,7 +59,7 @@ func handleConn(c net.Conn) {
 	rbuf := bufio.NewReader(c)
 	// 写缓存变量
 	wbuf := bufio.NewWriter(c)
-
+	defer wbuf.Flush()
 	for {
 		// read from the connection
 
@@ -104,6 +104,7 @@ func main() {
 		c, err := l.Accept()
 		if err != nil {
 			fmt.Println("accept error:", err)
+			break
 		}
 
 		// start a new goroutine to handle the new connection.

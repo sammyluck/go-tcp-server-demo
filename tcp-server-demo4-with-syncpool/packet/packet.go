@@ -136,7 +136,7 @@ func Decode(packet []byte) (Packet, error) {
 		}
 		return s, err
 	default:
-		return nil, fmt.Errorf("unkown commandID [%d]", commandID)
+		return nil, fmt.Errorf("unknown commandID [%d]", commandID)
 	}
 }
 
@@ -172,7 +172,7 @@ func Encode(p Packet) ([]byte, error) {
 			return nil, err
 		}
 	default:
-		return nil, fmt.Errorf("unkonwn type [%s]", t)
+		return nil, fmt.Errorf("unknown type [%s]", t)
 	}
 	// 封装 packet 包头和包体
 	return bytes.Join([][]byte{[]byte{commandID}, pktBody}, nil), nil
